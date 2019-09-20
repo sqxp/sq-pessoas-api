@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  sq-pessoas-api:
+    container_name: sq_pessoas_api
+    image: sqxp/sq-pessoas-api
+    ports:
+      - 80:5000
+      - 443:5001
+    networks:
+      - sq_pessoas_api_network
+networks:
+  sq_pessoas_api_network:
+    driver: bridge
+    name: sq_pessoas_api_network
