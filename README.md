@@ -1,4 +1,5 @@
 # sq-pessoas-api
+![](https://github.com/sqxp/sq-pessoas-api/workflows/build/badge.svg)
 
 ### Api GraphQl de pessoas para uso em provas de seleção da Squadra.
 * Quando a API sobe ela cria um playground que pode ser utilizado para testar as consultas
