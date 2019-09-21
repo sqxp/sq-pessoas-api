@@ -6,6 +6,22 @@
   * Path do playground na API: **/ui/playground**
 * Obs: A Api expõe atualmente apenas um método de consulta que sana as necessidades da prova atual.
 
+## Subir
+### Pre-requisitos:
+1. Docker
+2. Docker Compose
+
+### Comandos
+```sh
+git clone https://github.com/sqxp/sq-pessoas-api.git
+cd sq-pessoas-api
+docker build -t sqxp/sq-pessoas-api .
+docker-compose up -d
+```
+
+* Feito isto a aplicação sobe em localhost porta 8080, caso queira alterar a porta, alterar o docker-compose.yml.
+* Para acessar o playground após a subida da API acesse: http://localhost:8080/ui/playground
+
 ## GraphQL Schemas
 ```graphql
 type Pessoa {
