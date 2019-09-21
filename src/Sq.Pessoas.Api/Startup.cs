@@ -15,26 +15,16 @@ namespace Sq.Pessoas.Api
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
             services.AddPessoaService();
             services.AddPessoaGraphQl();
-            services.AddGraphQL(options =>
-            {
-                options.EnableMetrics = true;
-                options.ExposeExceptions = true;
-            });
         }
-        
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsDevelopment()) 
                 app.UseDeveloperExceptionPage();
             
-            app.UseGraphQL<ISchema>("/graphql");
-            app.UseGraphQLPlayground(new GraphQLPlaygroundOptions
-            {
-                Path = "/ui/playground"
-            });
+            app.UsePessoaGraphQl("/graphql", "/ui/playground");
         }
     }
 }
