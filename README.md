@@ -7,7 +7,7 @@
 * Obs: A Api expõe atualmente apenas um método de consulta que sana as necessidades da prova atual.
 
 ## Subir
-### Pre-requisitos:
+### Pre-requisitos
 1. Docker
 2. Docker Compose
 
