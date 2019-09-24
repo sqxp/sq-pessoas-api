@@ -25,7 +25,7 @@ namespace Sq.Pessoas.GraphQl.Models
             });
         }
 
-        public static void UsePessoaGraphQl(this IApplicationBuilder app, string graphQlEndpoint, string graphQlPlaygroundEndpoint)
+        public static void UseGraphQlWithPlayground(this IApplicationBuilder app, string graphQlEndpoint, string graphQlPlaygroundEndpoint)
         {
             app.UseGraphQL<ISchema>(graphQlEndpoint);
             app.UseGraphQLPlayground(new GraphQLPlaygroundOptions

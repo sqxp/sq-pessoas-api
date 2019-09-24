@@ -22,7 +22,10 @@ namespace Sq.Pessoas.Api
             if (env.IsDevelopment()) 
                 app.UseDeveloperExceptionPage();
             
-            app.UsePessoaGraphQl("/graphql", "/ui/playground");
+            app.UseGraphQlWithPlayground(
+                graphQlEndpoint:"/graphql",
+                graphQlPlaygroundEndpoint:"/ui/playground"
+            );
         }
     }
 }
