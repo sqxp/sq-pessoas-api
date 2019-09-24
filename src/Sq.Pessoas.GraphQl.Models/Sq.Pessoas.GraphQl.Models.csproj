@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
@@ -10,7 +10,7 @@
         <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
         <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.4.0" />
         <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
     </ItemGroup>
 
     <ItemGroup>

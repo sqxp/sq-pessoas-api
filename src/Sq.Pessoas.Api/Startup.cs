@@ -1,11 +1,8 @@
-﻿using GraphQL;
-using GraphQL.Server;
-using GraphQL.Server.Ui.Playground;
-using GraphQL.Types;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Sq.Pessoas.Api.Extensions;
 using Sq.Pessoas.GraphQl.Models;
 using Sq.Pessoas.Services;
 
@@ -15,11 +12,12 @@ namespace Sq.Pessoas.Api
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSynchronousIO();
             services.AddPessoaService();
             services.AddPessoaGraphQl();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment()) 
                 app.UseDeveloperExceptionPage();
