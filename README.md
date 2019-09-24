@@ -1,4 +1,4 @@
-# sq-pessoas-api
+# 👥 sq-pessoas-api
 ![](https://github.com/sqxp/sq-pessoas-api/workflows/build/badge.svg)
 
 ### Api GraphQl de pessoas para uso em provas de seleção da Squadra.
@@ -7,7 +7,7 @@
 * Obs: A Api expõe atualmente apenas um método de consulta que sana as necessidades da prova atual.
 
 ## Subir
-### Pre-requisitos:
+### Pre-requisitos
 1. Docker
 2. Docker Compose
 
